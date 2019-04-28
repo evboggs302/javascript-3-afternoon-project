@@ -107,8 +107,24 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var { name, catFriends } = cat;
+var Grump = catFriends.shift();
+catFriends = {
+  name: "Lazy Bones",
+  activities: ["sleep", "pre-sleep naps"]
+};
+Grump = {
+  name: "Grumpy",
+  activities: ["be grumpy", "eat food"]
+};
+
+var { name, activities } = Grump;
+var grumpyActivity = activities.pop();
+
+var fluffy2ndFriend = catFriends.name;
+
+console.log(grumpyActivity);
+console.log(fluffy2ndFriend);
 
 ////////// PROBLEM 4 //////////
 
