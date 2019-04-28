@@ -123,9 +123,6 @@ var grumpyActivity = activities.pop();
 
 var fluffy2ndFriend = catFriends.name;
 
-console.log(grumpyActivity);
-console.log(fluffy2ndFriend);
-
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -163,6 +160,18 @@ var myCar = {
 */
 
 //Code Here
+
+function recordCleaner() {
+  var { make, model, year, accidents } = myCar;
+  for (var i = 0; i < accidents.length; i++) {
+    for (var key in i) {
+      key === atFaultForAccident;
+      return (atFaultForAccident = false);
+    }
+  }
+  var myCar = { make, model, year, accidents };
+  return myCar;
+}
 
 ////////// PROBLEM 5 //////////
 
