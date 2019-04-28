@@ -109,18 +109,20 @@ var cat = {
 //Code Here
 var { name, catFriends } = cat;
 var Grump = catFriends.shift();
+
 catFriends = {
   name: "Lazy Bones",
   activities: ["sleep", "pre-sleep naps"]
 };
+
 Grump = {
   name: "Grumpy",
   activities: ["be grumpy", "eat food"]
 };
 
 var { name, activities } = Grump;
-var grumpyActivity = activities.pop();
 
+var grumpyActivity = activities.pop();
 var fluffy2ndFriend = catFriends.name;
 
 ////////// PROBLEM 4 //////////
@@ -189,3 +191,14 @@ var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+function looper() {
+  for (let i = 0; i < numsArr.length; i++) {
+    for (let j = 0; j < i.length; j++) {
+      if (i[j] % 2 === 0) {
+        i[j].splice(j, 1, "even");
+      } else {
+        i[j].splice(j, 1, "odd");
+      }
+    }
+  }
+}
