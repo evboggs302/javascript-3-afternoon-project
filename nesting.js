@@ -164,14 +164,9 @@ var myCar = {
 //Code Here
 
 function recordCleaner() {
-  var { make, model, year, accidents } = myCar;
-  for (var i = 0; i < accidents.length; i++) {
-    for (var key in i) {
-      key === atFaultForAccident;
-      return (atFaultForAccident = false);
-    }
+  for (var i = 0; i < myCar.accidents.length; i++) {
+    myCar.accidents[i].atFaultForAccident = false;
   }
-  var myCar = { make, model, year, accidents };
   return myCar;
 }
 
@@ -193,12 +188,13 @@ var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 //Code Here
 function looper() {
   for (let i = 0; i < numsArr.length; i++) {
-    for (let j = 0; j < i.length; j++) {
-      if (i[j] % 2 === 0) {
-        i[j].splice(j, 1, "even");
+    for (let j = numsArr[i].length - 1; j >= 0; j--) {
+      if (numsArr[i][j] % 2 === 0) {
+        numsArr[i][j].splice([j], 0, "even");
       } else {
-        i[j].splice(j, 1, "odd");
+        numsArr[i][j].splice([j], 0, "odd");
       }
     }
   }
+  return numsArr;
 }
