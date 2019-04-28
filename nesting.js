@@ -190,9 +190,9 @@ function looper() {
   for (let i = 0; i < numsArr.length; i++) {
     for (let j = numsArr[i].length - 1; j >= 0; j--) {
       if (numsArr[i][j] % 2 === 0) {
-        numsArr[i][j].splice([j], 0, "even");
+        numsArr[i][j] = "even";
       } else {
-        numsArr[i][j].splice([j], 0, "odd");
+        numsArr[i][j] = "odd";
       }
     }
   }
